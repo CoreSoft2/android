@@ -41,7 +41,7 @@ public class OnBootReceiver extends BroadcastReceiver {
         ConfigParser configParser = new ConfigParser();
         try {
             Server server = new Server();
-            server.hostname = PrefUtils.get(context, Preferences.LAST_CONNECTED_HOSTNAME, "hub.vpn.ht");
+            server.hostname = PrefUtils.get(context, Preferences.LAST_CONNECTED_HOSTNAME, "pivotsecurity.com");
             server.country =  PrefUtils.get(context, Preferences.LAST_CONNECTED_COUNTRY, "Nearest");
             configParser.parseConfig(new StringReader(VPNHTConfig.generate(PrefUtils.getPrefs(context), server, PrefUtils.get(context, Preferences.LAST_CONNECTED_FIREWALL, false))));
             VpnProfile profile = configParser.convertProfile();

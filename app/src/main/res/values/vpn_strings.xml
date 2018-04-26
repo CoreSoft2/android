@@ -3,7 +3,7 @@
   ~ Distributed under the GNU GPL v2 with additional terms. For full terms see the file doc/LICENSE.txt
   -->
 <resources>
-    <string name="app" translatable="false">VPN.ht</string>
+    <string name="app" translatable="false">PivotSecurity.com</string>
     <string name="address">Server Address:</string>
     <string name="port">Server Port:</string>
     <string name="cant_read_folder">Unable to read directory</string>
@@ -110,7 +110,7 @@
     <string name="version_info">%1$s %2$s</string>
     <string name="send_logfile">Send log file</string>
     <string name="send">Send</string>
-    <string name="ics_openvpn_log_file">VPN.ht log file</string>
+    <string name="ics_openvpn_log_file">PivotSecurity.com log file</string>
     <string name="copied_entry">Copied log entry to clip board</string>
     <string name="tap_mode">Tap Mode</string>
     <string name="faq_tap_mode">Tap Mode is not possible with the non root VPN API. Therefore this application cannot provide tap support</string>
@@ -186,7 +186,7 @@
     <string name="routing">Routing</string>
     <string name="obscure">Obscure OpenVPN Settings. Normally not needed.</string>
     <string name="advanced">Advanced</string>
-    <string name="export_config_title">VPN.ht Config</string>
+    <string name="export_config_title">PivotSecurity.com Config</string>
     <string name="warn_no_dns">No DNS servers being used. Name resolution may not work. Consider setting custom DNS Servers. Please also note that Android will keep using your proxy settings specified for your mobile/Wi-Fi connection when no DNS servers are set.</string>
     <string name="dns_add_error">Could not add DNS Server \"%1$s\", rejected by the system: %2$s</string>
     <string name="ip_add_error">Could not configure IP Address \"%1$s\", rejected by the system: %2$s</string>
@@ -227,10 +227,10 @@
     <string name="reconnection_settings">Reconnection settings</string>
     <string name="connectretrymessage">Number of seconds to wait between connection attempts.</string>
     <string name="connectretrywait">Seconds between connections</string>
-    <string name="minidump_generated">VPN.ht crashed unexpectedly. Please consider using the send Minidump option in the main menu</string>
+    <string name="minidump_generated">PivotSecurity.com crashed unexpectedly. Please consider using the send Minidump option in the main menu</string>
     <string name="send_minidump">Send Minidump to developer</string>
     <string name="send_minidump_summary">Sends debugging information about last crash to developer</string>
-    <string name="notifcation_title">VPN.ht - %s</string>
+    <string name="notifcation_title">PivotSecurity.com - %s</string>
     <string name="session_ipv4string">%1$s - %2$s</string>
     <string name="session_ipv6string">%1$s - %3$s, %2$s</string>
     <string name="state_connecting">Connecting</string>

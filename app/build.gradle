@@ -14,7 +14,7 @@ buildscript {
 
 apply plugin: 'com.ofg.uptodate'
 apply plugin: 'com.android.application'
-apply plugin: 'io.fabric'
+//apply plugin: 'io.fabric'
 
 repositories {
     maven { url 'https://maven.fabric.io/public' }
@@ -22,8 +22,8 @@ repositories {
 
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.0"
+    compileSdkVersion 26
+    buildToolsVersion "26.0.0"
 
     defaultConfig {
         applicationId "ht.vpn.android"
@@ -69,9 +69,9 @@ dependencies {
     compile 'com.mobsandgeeks:android-saripaar:2.0.2'
     compile 'com.squareup.retrofit:retrofit:1.9.0'
     compile 'com.jakewharton.timber:timber:3.1.0'
-    compile('com.crashlytics.sdk.android:crashlytics:2.2.4@aar') {
-        transitive = true;
-    }
+   // compile('com.crashlytics.sdk.android:crashlytics:2.2.4@aar') {
+   //     transitive = true;
+   // }
 }
 
 gradle.taskGraph.whenReady { taskGraph ->
@@ -117,7 +117,7 @@ gradle.taskGraph.whenReady { taskGraph ->
             }
 
             if (pass.size() <= 0) {
-                throw new InvalidUserDataException("You must enter a password to proceed.")
+                //throw new InvalidUserDataException("You must enter a password to proceed.")
             }
         }
 

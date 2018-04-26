@@ -1,49 +1,82 @@
 package ht.vpn.android.network;
 
+import java.util.*;
 import android.util.Base64;
-
-import ht.vpn.android.network.responses.ServersResponse;
-import ht.vpn.android.network.responses.SmartDNSResponse;
-import retrofit.Callback;
-import retrofit.RequestInterceptor;
-import retrofit.RestAdapter;
-import retrofit.http.GET;
+import java.io.*;
+import java.net.*;
 
 public class VPNService {
-    private static final String API_URL = "https://api.vpn.ht/";
-    private Client mClient;
+    private static final String API_URL = "https://www.pivotsecurity.com/wp-json/api/v1/";
 
-    private VPNService(String username, String password) {
-        RestAdapter.Builder adapterBuilder = new RestAdapter.Builder().setEndpoint(API_URL);
+    private VPNService() {
+    }
 
+    public static String login(String username, String password){
         if (username != null && password != null) {
-            final String credentials = username + ":" + password;
-            adapterBuilder.setRequestInterceptor(new UserAgentInterceptor() {
-                @Override
-                public void intercept(RequestInterceptor.RequestFacade request) {
-                    super.intercept(request);
-                    String string = "Basic " + Base64.encodeToString(credentials.getBytes(), Base64.NO_WRAP);
-                    request.addHeader("Authorization", string);
-                }
-            });
+        	HashMap<String, String> data = new HashMap<String, String>();
+        	data.put("user", username);
+        	data.put("auth", password);
+        	return callPostService(API_URL + "logintoserver", data);
         }
 
-        RestAdapter restAdapter = adapterBuilder.build();
-        mClient = restAdapter.create(Client.class);
+        return null;
     }
+    
+    public static String callPostService(String Url, HashMap<String, String> data) {
+        URL url;
+        String response = "";
+        try {
+            url = new URL(Url);
 
-    public static VPNService.Client get() {
-        return new VPNService(null, null).mClient;
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setReadTimeout(15000);
+            conn.setConnectTimeout(15000);
+            conn.setRequestMethod("POST");
+            conn.setDoInput(true);
+            conn.setDoOutput(true);
+
+
+            OutputStream os = conn.getOutputStream();
+            BufferedWriter writer = new BufferedWriter(
+                    new OutputStreamWriter(os, "UTF-8"));
+            writer.write(getPostDataString(data));
+
+            writer.flush();
+            writer.close();
+            os.close();
+            int responseCode=conn.getResponseCode();
+
+            if (responseCode == 200) {
+                String line;
+                BufferedReader br=new BufferedReader(new InputStreamReader(conn.getInputStream()));
+                while ((line=br.readLine()) != null) {
+                    response+=line;
+                }
+            }
+            else {
+                response="";
+
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return response;
     }
+    private static String getPostDataString(HashMap<String, String> params) throws UnsupportedEncodingException{
+        StringBuilder result = new StringBuilder();
+        boolean first = true;
+        for(Map.Entry<String, String> entry : params.entrySet()){
+            if (first)
+                first = false;
+            else
+                result.append("&");
 
-    public static VPNService.Client get(String username, String password) {
-        return new VPNService(username, password).mClient;
-    }
+            result.append(URLEncoder.encode(entry.getKey(), "UTF-8"));
+            result.append("=");
+            result.append(URLEncoder.encode(entry.getValue(), "UTF-8"));
+        }
 
-    public interface Client {
-        @GET("/servers")
-        void servers(Callback<ServersResponse> callback);
-        @GET("/smartdns")
-        void smartdns(Callback<SmartDNSResponse> callback);
+        return result.toString();
     }
 }

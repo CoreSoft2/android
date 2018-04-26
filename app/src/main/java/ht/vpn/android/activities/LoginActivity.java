@@ -76,7 +76,7 @@ public class LoginActivity extends BaseActivity implements Validator.ValidationL
     @OnClick(R.id.registerButton)
     public void registerClick(View v) {
         Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setData(Uri.parse("https://vpn.ht/signup?_ref=android"));
+        intent.setData(Uri.parse("https://www.pivotsecurity.com/"));
         startActivity(intent);
     }
 
@@ -95,10 +95,9 @@ public class LoginActivity extends BaseActivity implements Validator.ValidationL
     @Override
     public void onValidationSucceeded() {
         LoadingDialogFragment.show(getSupportFragmentManager());
-        VPNService.get(mUsername.getText().toString(), mPassword.getText().toString()).servers(new Callback<ServersResponse>() {
-            @Override
-            public void success(ServersResponse serversResponse, Response response) {
-                LoadingDialogFragment.dismiss(getSupportFragmentManager());
+        String result = VPNService.login(mUsername.getText().toString(), mPassword.getText().toString());
+        
+        if (result.equalsIgnoreCase("\"OK\"")) {
                 PrefUtils.save(LoginActivity.this, Preferences.USERNAME, mUsername.getText().toString());
                 PrefUtils.save(LoginActivity.this, Preferences.PASSWORD, mPassword.getText().toString());
 
@@ -111,16 +110,11 @@ public class LoginActivity extends BaseActivity implements Validator.ValidationL
                     setResult(RESULT_OK);
                     finish();
                 }
-            }
-
-            @Override
-            public void failure(RetrofitError error) {
-                LoadingDialogFragment.dismiss(getSupportFragmentManager());
-                if (error != null && error.getResponse() != null && error.getResponse().getStatus() == 401) {
-                    Toast.makeText(LoginActivity.this, R.string.credentials_incorrect, Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
+        }else{
+            Toast.makeText(LoginActivity.this, R.string.credentials_incorrect, Toast.LENGTH_SHORT).show();
+        }
+        
+		LoadingDialogFragment.dismiss(getSupportFragmentManager());
     }
 
     @Override

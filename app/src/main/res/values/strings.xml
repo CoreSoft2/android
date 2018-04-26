@@ -1,6 +1,6 @@
 <resources>
 
-    <string name="app_name">VPN.ht</string>
+    <string name="app_name">PivotSecurity.com</string>
     <string name="unknown_error">Something went wrong.</string>
     <string name="no_internet">There is no internet connection available</string>
 
@@ -27,14 +27,14 @@
     <string name="unknown">Unknown</string>
     <string name="disconnecting">Disconnecting</string>
     <string name="reboot_title">Restart required</string>
-    <string name="reboot_message">VPN.ht was not able to connect to Android\'s VPN service. Please restart your device to resolve this issue.</string>
+    <string name="reboot_message">PivotSecurity.com was not able to connect to Android\'s VPN service. Please restart your device to resolve this issue.</string>
     <string name="no_server_selected">No server selected</string>
 
     <!-- PreferencesActivity -->
     <string name="behaviour">Behaviour</string>
     <string name="connection">Connection</string>
     <string name="reconnect_reboot">Reconnect on restart</string>
-    <string name="reconnect_reboot_summary">VPN.ht will reconnect if it was active on system restart/shutdown.</string>
+    <string name="reconnect_reboot_summary">PivotSecurity.com will reconnect if it was active on system restart/shutdown.</string>
     <string name="press_logout">Press to logout</string>
     <string name="account">Account</string>
     <string name="killswitch">Enable killswitch</string>

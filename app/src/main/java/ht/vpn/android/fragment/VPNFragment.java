@@ -71,7 +71,7 @@ public class VPNFragment extends BaseFragment implements VpnStatus.LogListener, 
     private LatLng mCurrentLocation;
     private Boolean mShowsConnected = false, mCreated = false;
     private String mDetectedCountry;
-    private VPNService.Client mVPNAPI;
+    //private VPNService.Client mVPNAPI;
     private ArrayList<Server> mServers = new ArrayList<>();
     private HashMap<Marker, Integer> mMarkers = new HashMap<>();
     private MainActivity mActivity;
@@ -243,8 +243,9 @@ public class VPNFragment extends BaseFragment implements VpnStatus.LogListener, 
             updateMapLocation();
 
             if(mActivity != null) {
-                mVPNAPI = VPNService.get(PrefUtils.get(mActivity, Preferences.USERNAME, ""), PrefUtils.get(mActivity, Preferences.PASSWORD, ""));
-                mVPNAPI.servers(mServersCallback);
+                String result = VPNService.login(PrefUtils.get(mActivity, Preferences.USERNAME, ""), PrefUtils.get(mActivity, Preferences.PASSWORD, ""));
+                //mVPNAPI.servers(mServersCallback);
+                System.out.println(result);
             }
         }
     };

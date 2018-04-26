@@ -10,7 +10,7 @@ import ht.vpn.android.utils.PrefUtils;
 
 public class Preferences {
     @Deprecated
-    public final static String FILE_NAME = "vpn.ht";
+    public final static String FILE_NAME = "pivotsecurity.com";
 
     public final static String USERNAME = "username";
     public final static String PASSWORD = "password";
