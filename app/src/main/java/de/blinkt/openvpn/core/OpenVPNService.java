@@ -38,14 +38,14 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Vector;
 
-import ht.vpn.android.BuildConfig;
-import ht.vpn.android.R;
-import ht.vpn.android.VpnProfile;
+import pivot.security.android.BuildConfig;
+import pivot.security.android.R;
+import pivot.security.android.VpnProfile;
 import de.blinkt.openvpn.core.VpnStatus.ByteCountListener;
 import de.blinkt.openvpn.core.VpnStatus.ConnectionStatus;
 import de.blinkt.openvpn.core.VpnStatus.StateListener;
-import ht.vpn.android.activities.DisconnectVPN;
-import ht.vpn.android.activities.MainActivity;
+import pivot.security.android.activities.DisconnectVPN;
+import pivot.security.android.activities.MainActivity;
 
 import static de.blinkt.openvpn.core.NetworkSpace.ipAddress;
 import static de.blinkt.openvpn.core.VpnStatus.ConnectionStatus.LEVEL_CONNECTED;

@@ -30,9 +30,9 @@ import java.util.LinkedList;
 import java.util.Locale;
 import java.util.Vector;
 
-import ht.vpn.android.BuildConfig;
-import ht.vpn.android.R;
-import ht.vpn.android.VpnProfile;
+import pivot.security.android.BuildConfig;
+import pivot.security.android.R;
+import pivot.security.android.VpnProfile;
 import de.blinkt.openvpn.core.VpnStatus.ConnectionStatus;
 
 public class OpenVpnManagementThread implements Runnable, OpenVPNManagement {

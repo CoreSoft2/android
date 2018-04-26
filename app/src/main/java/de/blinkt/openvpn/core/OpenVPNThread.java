@@ -24,8 +24,8 @@ import java.util.Map.Entry;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import ht.vpn.android.R;
-import ht.vpn.android.VpnProfile;
+import pivot.security.android.R;
+import pivot.security.android.VpnProfile;
 import de.blinkt.openvpn.core.VpnStatus.ConnectionStatus;
 import de.blinkt.openvpn.core.VpnStatus.LogItem;
 

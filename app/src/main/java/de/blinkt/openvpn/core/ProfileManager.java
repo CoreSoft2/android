@@ -19,7 +19,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
-import ht.vpn.android.VpnProfile;
+import pivot.security.android.VpnProfile;
 
 public class ProfileManager {
     private static final String PREFS_NAME = "VPNList";

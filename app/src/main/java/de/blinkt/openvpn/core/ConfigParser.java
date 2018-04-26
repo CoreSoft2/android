@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Vector;
 
-import ht.vpn.android.VpnProfile;
+import pivot.security.android.VpnProfile;
 
 //! Openvpn Config FIle Parser, probably not 100% accurate but close enough
 

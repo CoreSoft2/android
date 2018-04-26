@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="ht.vpn.android">
+    package="pivot.security.android">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -74,7 +74,7 @@
             android:name=".api.ExternalOpenVPNService"
             tools:ignore="ExportedService">
             <intent-filter>
-                <action android:name="ht.vpn.android.api.IOpenVPNAPIService" />
+                <action android:name="pivot.security.android.api.IOpenVPNAPIService" />
             </intent-filter>
         </service>
 

@@ -1,3 +1,3 @@
-package ht.vpn.android.api;
+package pivot.security.android.api;
 
 parcelable APIVpnProfile;

@@ -1,4 +1,4 @@
-package ht.vpn.android.api;
+package pivot.security.android.api;
 
 /**
  * Example of a callback interface used by IRemoteService to send

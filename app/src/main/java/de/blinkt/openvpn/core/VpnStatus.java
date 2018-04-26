@@ -33,7 +33,7 @@ import java.util.Locale;
 import java.util.UnknownFormatConversionException;
 import java.util.Vector;
 
-import ht.vpn.android.R;
+import pivot.security.android.R;
 
 public class VpnStatus {
 

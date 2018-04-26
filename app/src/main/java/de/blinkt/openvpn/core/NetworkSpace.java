@@ -19,7 +19,7 @@ import java.util.PriorityQueue;
 import java.util.TreeSet;
 import java.util.Vector;
 
-import ht.vpn.android.BuildConfig;
+import pivot.security.android.BuildConfig;
 
 public class NetworkSpace {
 

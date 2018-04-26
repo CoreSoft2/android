@@ -1,8 +1,8 @@
 // IOpenVPNAPIService.aidl
-package ht.vpn.android.api;
+package pivot.security.android.api;
 
-import ht.vpn.android.api.APIVpnProfile;
-import ht.vpn.android.api.IOpenVPNStatusCallback; 
+import pivot.security.android.api.APIVpnProfile;
+import pivot.security.android.api.IOpenVPNStatusCallback; 
 
 import android.content.Intent;
 import android.os.ParcelFileDescriptor;

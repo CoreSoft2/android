@@ -14,8 +14,8 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.List;
 
-import ht.vpn.android.R;
-import ht.vpn.android.VpnProfile;
+import pivot.security.android.R;
+import pivot.security.android.VpnProfile;
 
 public class ProxyDetection {
 	static SocketAddress detectProxy(VpnProfile vp) {

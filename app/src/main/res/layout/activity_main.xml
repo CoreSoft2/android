@@ -19,7 +19,7 @@
         <fragment
             android:id="@+id/vpnFragment"
             android:tag="vpn_fragment"
-            class="ht.vpn.android.fragment.VPNFragment"
+            class="pivot.security.android.fragment.VPNFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </FrameLayout>

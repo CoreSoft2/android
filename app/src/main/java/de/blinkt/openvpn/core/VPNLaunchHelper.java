@@ -16,8 +16,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Vector;
 
-import ht.vpn.android.R;
-import ht.vpn.android.VpnProfile;
+import pivot.security.android.R;
+import pivot.security.android.VpnProfile;
 
 public class VPNLaunchHelper {
     private static final String MININONPIEVPN = "nopie_openvpn";

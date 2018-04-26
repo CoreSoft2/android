@@ -8,8 +8,8 @@ package de.blinkt.openvpn.core;
 import android.content.Context;
 import android.text.TextUtils;
 
-import ht.vpn.android.R;
-import ht.vpn.android.VpnProfile;
+import pivot.security.android.R;
+import pivot.security.android.VpnProfile;
 import org.spongycastle.util.io.pem.PemObject;
 import org.spongycastle.util.io.pem.PemReader;
 

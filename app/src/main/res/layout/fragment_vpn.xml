@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ht.vpn.android.widget.TouchableScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+<pivot.security.android.widget.TouchableScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/scrollView"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -179,4 +179,4 @@
             android:theme="@style/Theme.VPNht.StopButton" />
 
     </LinearLayout>
-</ht.vpn.android.widget.TouchableScrollView>
+</pivot.security.android.widget.TouchableScrollView>
